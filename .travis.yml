@@ -1,6 +1,9 @@
 sudo: false
+dist: trusty
 language: java
 script: boot test-cljs -x
+before_install:
+  - curl -sSL https://raw.githubusercontent.com/cljs-oss/canary/master/scripts/install-canary.sh | bash
 install:
   - mkdir -p ~/bin
   - export PATH=~/bin:$PATH

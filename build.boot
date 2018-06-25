@@ -9,7 +9,7 @@
                            [tolitius/boot-check                   "0.1.6"    :scope "test"]
                            [org.clojure/test.check                "0.9.0"    :scope "test"]
                            [org.clojure/clojure                   ~(clojure-version)]
-                           [org.clojure/clojurescript             "1.10.439"]
+                           [org.clojure/clojurescript             ~(or (System/getenv "CANARY_CLOJURESCRIPT_VERSION") "1.10.520")]
                            [cljsjs/jquery                         "3.2.1-0"]
                            [hoplon/javelin                        "3.9.0"]]))
 
